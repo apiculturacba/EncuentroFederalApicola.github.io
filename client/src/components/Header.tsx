@@ -24,6 +24,9 @@ export default function Header() {
             <a href="#programa" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
               Programa
             </a>
+            <a href="/image-viewer" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
+              Programa Original
+            </a>
             <a href="#ponentes" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
               Ponentes
             </a>
