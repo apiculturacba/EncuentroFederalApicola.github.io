@@ -72,7 +72,7 @@ export default function Home() {
         
         <DayTabs selectedDay={selectedDay} onDayChange={setSelectedDay} />
         
-        <div id="activities-container">
+        <div id="actividades">
           {isLoading ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
               {[...Array(6)].map((_, i) => (

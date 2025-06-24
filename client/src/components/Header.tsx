@@ -32,7 +32,7 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#programa" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
+            <a href="#actividades" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
               Programa
             </a>
             <a 
@@ -84,7 +84,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden pb-6">
             <nav className="flex flex-col space-y-4">
-              <a href="#programa" className="text-gray-700 hover:text-honey-600 font-medium">
+              <a href="#actividades" className="text-gray-700 hover:text-honey-600 font-medium">
                 Programa
               </a>
               <a 
