@@ -111,6 +111,13 @@ export default function Header() {
                 Programa Completo
               </a>
               <a 
+                href="/proyecto-encuentro-apicola.tar.gz" 
+                download
+                className="text-gray-700 hover:text-honey-600 font-medium"
+              >
+                Descargar Código
+              </a>
+              <a 
                 href="https://forms.gle/nN4p1kR9rnwWmThr8" 
                 target="_blank"
                 rel="noopener noreferrer"
