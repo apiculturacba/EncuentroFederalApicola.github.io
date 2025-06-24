@@ -7,60 +7,54 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Event Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-honey-500 rounded-full flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 4L9 7V9C9 10.1 9.9 11 11 11V13C11 14.1 11.9 15 13 15H15C16.1 15 17 14.1 17 13V11C18.1 11 19 10.1 19 9Z"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold">3er Encuentro Federal Apícola</h3>
-            </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">3er Encuentro Federal Apícola</h3>
             <p className="text-gray-300 mb-4">
-              El evento más importante de apicultura en Argentina. Conectando a productores, investigadores y entusiastas de la apicultura.
+              El evento más importante de apicultura del país, reuniendo a productores, especialistas y jóvenes del sector.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-honey-400 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-honey-400 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-honey-400 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-honey-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+            <p className="text-sm text-gray-400">
+              10-11 Julio 2025 | Centro de Convenciones, Córdoba Capital
+            </p>
+          </div>
+          
+          {/* Logo CFI */}
+          <div className="flex flex-col items-center">
+            <h4 className="text-sm font-semibold mb-4 text-gray-300">Organizado por</h4>
+            <div className="w-32 h-20 flex items-center justify-center">
+              <img 
+                src="/logo-cfi.png" 
+                alt="Consejo Federal de Inversiones" 
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+          </div>
+          
+          {/* Logo Ministerio - Más prominente */}
+          <div className="flex flex-col items-center">
+            <h4 className="text-sm font-semibold mb-4 text-gray-300">Con el apoyo de</h4>
+            <div className="w-40 h-24 flex items-center justify-center">
+              <img 
+                src="/logo-ministerio.jpg" 
+                alt="Ministerio de Bioagroindustria - Gobierno de Córdoba" 
+                className="h-20 w-auto object-contain"
+              />
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Contacto */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Programa completo</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Lista de ponentes</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Inscripciones</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Alojamiento</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Patrocinadores</a></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Soporte</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Centro de ayuda</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Preguntas frecuentes</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Términos y condiciones</a></li>
-              <li><a href="#" className="hover:text-honey-400 transition-colors">Política de privacidad</a></li>
-            </ul>
+            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>+54 9 3518 07-2572</p>
+              <p>+54 9 3516 66-7756</p>
+              <p>apicolacba@gmail.com</p>
+              <p>biodesarrollominbai@gmail.com</p>
+            </div>
           </div>
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Encuentro Federal Apícola. Todos los derechos reservados.</p>
+          <p>&copy; 2025 3er Encuentro Federal Apícola. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

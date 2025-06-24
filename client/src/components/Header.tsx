@@ -18,30 +18,33 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg border-b-4 border-honey-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          <div className="flex items-center space-x-4">
+        <div className="flex flex-col items-center space-y-4 py-6">
+          {/* Logo Ministerio - Prominente en la parte superior */}
+          <div className="w-full flex justify-center">
+            <img 
+              src="/logo-ministerio.jpg" 
+              alt="Ministerio de Bioagroindustria - Gobierno de Córdoba" 
+              className="h-16 w-auto object-contain"
+            />
+          </div>
+          
+          <div className="flex items-center justify-between w-full">
             {/* Logo CFI */}
-            <div className="w-20 h-16 flex items-center justify-center">
+            <div className="w-20 h-12 flex items-center justify-center">
               <img 
                 src="/logo-cfi.png" 
                 alt="Consejo Federal de Inversiones" 
-                className="h-14 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
             </div>
             
-            <div className="flex-1">
+            <div className="text-center flex-1">
               <h1 className="text-2xl font-bold text-gray-900">3er Encuentro Federal Apícola</h1>
               <p className="text-sm text-gray-600">10-11 Julio 2025 | Córdoba Capital</p>
             </div>
 
-            {/* Logo Ministerio */}
-            <div className="w-32 h-16 flex items-center justify-center">
-              <img 
-                src="/logo-ministerio.jpg" 
-                alt="Ministerio de Bioagroindustria - Gobierno de Córdoba" 
-                className="h-12 w-auto object-contain"
-              />
-            </div>
+            {/* Espacio para simetría */}
+            <div className="w-20 h-12"></div>
           </div>
           
           <nav className="hidden md:flex space-x-8">
