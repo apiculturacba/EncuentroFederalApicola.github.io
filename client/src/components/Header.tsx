@@ -36,7 +36,7 @@ export default function Header() {
               Programa
             </a>
             <a 
-              href="/attached_assets/Programa Completo_1750772785861.pdf" 
+              href="/programa-completo.pdf" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-honey-600 font-medium transition-colors flex items-center"
@@ -88,7 +88,7 @@ export default function Header() {
                 Programa
               </a>
               <a 
-                href="/attached_assets/Programa Completo_1750772785861.pdf" 
+                href="/programa-completo.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 hover:text-honey-600 font-medium"

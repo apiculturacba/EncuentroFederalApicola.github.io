@@ -42,22 +42,35 @@ export class MemStorage implements IStorage {
   private initializeData() {
     // Initialize speakers
     const speakersData = [
-      { name: "Teresa Oyhambure", title: "Representante", organization: "CFI" },
-      { name: "Marcelo Pérez", title: "Responsable y coordinador del equipo apícola", organization: "CFI" },
-      { name: "Rodrigo Cerminara", title: "Especialista en Desarrollo Juvenil", organization: "Sector Productivo" },
-      { name: "Antonio Fabro", title: "Productor de material vivo, ex-docente", organization: "Sector Apícola" },
-      { name: "Marilina Beltramo", title: "Presidenta", organization: "Federación de Centros Juveniles región central" },
-      { name: "Jorge Lanza", title: "Productor apícola", organization: "Provincia de Buenos Aires" },
-      { name: "Rodolfo Nicolás Bringas", title: "Productor apícola", organization: "Villa de Soto" },
-      { name: "Ezequiel Fabro", title: "Productor apícola", organization: "Malabrigo, Santa Fe" },
-      { name: "Martín Colombani", title: "Apicultor", organization: "Sector Productivo" },
-      { name: "Nicolás Fioretti", title: "Docente", organization: "Sector Educativo" },
-      { name: "Melisa Geisa", title: "Moderadora", organization: "Equipo Organizador" }
+      { name: "Teresa Oyhambure", title: "Representante", organization: "CFI", bio: "Representante del Consejo Federal de Inversiones." },
+      { name: "Marcelo Pérez", title: "Responsable y coordinador del equipo apícola", organization: "CFI", bio: "Responsable y coordinador del equipo apícola del CFI." },
+      { name: "Rodrigo Cerminara", title: "Especialista en Desarrollo Juvenil", organization: "Sector Productivo", bio: "Especialista en Desarrollo Juvenil del sector productivo." },
+      { name: "Antonio Fabro", title: "Productor de material vivo, ex-docente", organization: "Sector Apícola", bio: "Productor de material vivo y ex-docente del sector apícola." },
+      { name: "Marilina Beltramo", title: "Presidenta", organization: "Federación de Centros Juveniles región central", bio: "Presidenta de la Federación de Centros Juveniles de la región central." },
+      { name: "Jorge Lanza", title: "Productor apícola", organization: "Provincia de Buenos Aires", bio: "Productor apícola de la Provincia de Buenos Aires." },
+      { name: "Rodolfo Nicolás Bringas", title: "Productor apícola", organization: "Villa de Soto", bio: "Productor apícola de Villa de Soto." },
+      { name: "Ezequiel Fabro", title: "Productor apícola", organization: "Malabrigo, Santa Fe", bio: "Productor apícola de Malabrigo, Santa Fe." },
+      { name: "Martín Colombani", title: "Apicultor", organization: "Sector Productivo", bio: "Apicultor del sector productivo." },
+      { name: "Nicolás Fioretti", title: "Docente", organization: "Sector Educativo", bio: "Docente del sector educativo." },
+      { name: "Melisa Geisa", title: "Moderadora", organization: "Equipo Organizador", bio: "Moderadora del equipo organizador." },
+      { name: "Daniel Vieytes", title: "Asesor", organization: "Ministerio de Bioagroindustria", bio: "Asesor especializado del Ministerio de Bioagroindustria de la Provincia de Córdoba." },
+      
+      // Day 2 speakers  
+      { name: "Martín Llaryora", title: "Gobernador", organization: "Provincia de Córdoba", bio: "Gobernador de la Provincia de Córdoba." },
+      { name: "Ignacio Lamothe", title: "Secretario General", organization: "Gobierno de Córdoba", bio: "Secretario General del Gobierno de Córdoba." },
+      { name: "Monica Odstrcil", title: "Funcionaria", organization: "Gobierno de Tucumán", bio: "Especialista en innovación tecnológica en apicultura tucumana e identificación de zonas óptimas mediante análisis geoespacial." },
+      { name: "Emanuel Canales Fuenzalida", title: "Productor y Especialista Apícola", organization: "Chile", bio: "Productor y especialista apícola de Chile, experto en apicultura regenerativa y determinación de estándares de calidades de mieles." },
+      { name: "Martin Colombani", title: "Docente y Productor", organization: "Sector Apícola", bio: "Docente y productor especializado en estrategia sanitaria regional como sello de calidad sostenible." },
+      { name: "Carolina Ulla", title: "CEO", organization: "AeroSustentable SAS", bio: "CEO de AeroSustentable SAS, especialista en sustentabilidad y liderazgo en apicultura." },
+      { name: "Martin Girodo", title: "Productor", organization: "Nueva Zelanda", bio: "Productor de miel de Manuka en Nueva Zelanda, experto en diversificación continua como estrategia sustentable de valor." },
+      { name: "Pablo Callieri", title: "CEO", organization: "Agro Catamarca S.A.", bio: "CEO de Agro Catamarca S.A., especialista en agregado de valor y conservación ambiental. Caso de éxito: Miel de Yunga." },
+      { name: "Gabriela Tamaño", title: "Docente e Investigadora", organization: "Universidad", bio: "Docente e investigadora universitaria especializada en caracterización y diferenciación de mieles como estrategia de valoración." },
+      { name: "Teresa Oyhamburu", title: "Directora de Programas", organization: "CFI", bio: "Directora de Programas del Consejo Federal de Inversiones (CFI)." }
     ];
 
     speakersData.forEach(speaker => {
       const id = this.currentSpeakerId++;
-      this.speakers.set(id, { ...speaker, id, bio: "", avatar: "" });
+      this.speakers.set(id, { ...speaker, id, avatar: null });
     });
 
     // Initialize rooms
@@ -71,7 +84,7 @@ export class MemStorage implements IStorage {
 
     roomsData.forEach(room => {
       const id = this.currentRoomId++;
-      this.rooms.set(id, { ...room, id });
+      this.rooms.set(id, { ...room, id, description: room.description || null });
     });
 
     // Initialize activities - Programa real del 3er Encuentro Federal Apícola
@@ -343,7 +356,16 @@ export class MemStorage implements IStorage {
 
     activitiesData.forEach(activity => {
       const id = this.currentActivityId++;
-      this.activities.set(id, { ...activity, id, enrolled: activity.enrolled || 0 });
+      this.activities.set(id, { 
+        ...activity, 
+        id, 
+        enrolled: 0,
+        capacity: activity.capacity || null,
+        roomId: activity.roomId || null,
+        speakerId: activity.speakerId || null,
+        requiresRegistration: activity.requiresRegistration || null,
+        tags: activity.tags || null
+      });
     });
   }
 
