@@ -51,14 +51,7 @@ export default function Header() {
               <FileText className="w-4 h-4 mr-1" />
               Programa Completo
             </a>
-            <a 
-              href="/proyecto-encuentro-apicola.tar.gz" 
-              download
-              className="text-gray-700 hover:text-honey-600 font-medium transition-colors flex items-center"
-            >
-              <FileText className="w-4 h-4 mr-1" />
-              Descargar Código
-            </a>
+
             <a 
               href="https://forms.gle/nN4p1kR9rnwWmThr8" 
               target="_blank"
@@ -110,13 +103,7 @@ export default function Header() {
               >
                 Programa Completo
               </a>
-              <a 
-                href="/proyecto-encuentro-apicola.tar.gz" 
-                download
-                className="text-gray-700 hover:text-honey-600 font-medium"
-              >
-                Descargar Código
-              </a>
+
               <a 
                 href="https://forms.gle/nN4p1kR9rnwWmThr8" 
                 target="_blank"
