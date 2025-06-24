@@ -20,14 +20,19 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-honey-500 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 4L9 7V9C9 10.1 9.9 11 11 11V13C11 14.1 11.9 15 13 15H15C16.1 15 17 14.1 17 13V11C18.1 11 19 10.1 19 9Z"/>
-              </svg>
+            {/* Logo CFI */}
+            <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center border">
+              <span className="text-xs text-gray-400 text-center">Logo CFI</span>
             </div>
-            <div>
+            
+            <div className="flex-1">
               <h1 className="text-2xl font-bold text-gray-900">3er Encuentro Federal Apícola</h1>
               <p className="text-sm text-gray-600">10-11 Julio 2025 | Córdoba Capital</p>
+            </div>
+
+            {/* Logo Ministerio */}
+            <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center border">
+              <span className="text-xs text-gray-400 text-center">Logo Ministerio</span>
             </div>
           </div>
           
