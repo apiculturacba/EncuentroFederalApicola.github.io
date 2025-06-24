@@ -1,0 +1,35 @@
+Horario	Moderador	Oradores	Título	Descripción
+ACREDITACIÓN Y RECEPCIÓN				
+09:30				
+APERTURA INSTITUCIONAL				
+10:30		Sec. Gral. Ignacio Lamothe	Inicio de la Jornada Técnica	
+		Gob. Martín Llaryora		
+INNOVACIÓN TECNOLÓGICA Y PRODUCTIVA				
+11:00	Ing. Germán Font, Subsecretario de Biodesarrollo e Innovación Agropecuaria. Ministerio de Bioagroindustria	Monica Odstrcil; funcionaria de Tucumán	La importancia de la Inteligencia Artificial (IA) y el uso de nuevas tecnologías aplicadas a desarrollos apícolas	Innovación tecnológica en apicultura tucumana. Identificación de zonas óptimas mediante análisis geoespacial
+		Pablo Cavigliasso; investigador INTA Marco Juárez		Polinización en sistemas productivos: sinergias entre la agricultura y la apicultura
+		Gabriel Alejandro Vairolatti, BeeVai		Plataforma de gestión integral para la apicultura en Córdoba
+		Miguel Mussi, Especialista en gestión de datos e IA		Gestión de datos con IA para la plataforma de aviso temprano
+11:45	Miguel Magnasco, Subsecretario de Biodiversidad. Ministerio de Ambiente y Economía Circular	Emanuel Canales Fuenzalida, productor y especialista apícola de Chile	Apicultura regenerativa en la región. Casos de éxito: proyecciones y desafíos	Apicultura regenerativa en Chile, Determinación de estándares de calidades de mieles
+		Lucas Andreoni, Dirección de Producción Agropecuaria del Ministerio de Bioagroindustria		Paisajes y corredores biológicos en Córdoba
+12:15				
+INNOVACIÓN ORGANIZACIONAL				
+12:20	Javier Folgar Bessone, CEO de Campos y Abejas	Martin Colombani, docente y productor	Innovación organizacional en grupo de productores y cooperativas	Estrategia sanitaria regional, como sello de calidad sostenible.
+		Eduardo Cossutta, presidente consorcio de exportación de mieles		El poder del trabajo colectivo: formación de un Consorcio Apícola como estrategia para el desarrollo territorial
+13:00				
+	INNOVACIÓN ORGANIZACIONAL (continuación)			
+14:00		Carolina Ulla, CEO de AeroSustentable SAS	Sustentabilidad y liderazgo en apicultura	La importancia de la sustentabilidad. Herramientas estratégicas para el desarrollo productivo.
+14:20				
+ESTRATEGIAS COMERCIALES Y VALOR AGREGADO				
+14:30	Lic. Mariano Mastrangelo. Experto COMEX	Martin Girodo productor de miel de Manuka en Nueva Zelanda	Certificación de mieles como oportunidad de diferenciación	Miel de Manuka. Diversificación continua como estrategia sustentable de valor.
+		Matias Muñoz, promotor del sello de IG		Caso de éxito: Identificación Geográfica (IG). Miel de monte nativo cordobés, como sello de calidad
+15:00	Gonzalo Avila Barquin, COMEX CaFram	Pablo Callieri, CEO de Agro Catamarca S.A.	Mieles regionales diferenciadas	Agregado de valor y conservación ambiental. Caso de éxito: Miel de Yunga
+		Renee Sayago, Gerente General de Desarrollo de Wayra		Inteligencia del monte. Cadenas de valor con identidad en el Gran Chaco Americano. Caso de éxito: Miel de Flores de Altamisqui
+		Alejandro Palacios, CEO de Apícola Agua Dulce		Caso de éxito: Miel de Azahar de Limón
+15:45	Charla TED	Grabriela Tamaño, docente e Investigadora universitaria	Caracterización y diferenciación de mieles como estrategia de valoración.	Diferencia entre diferenciación y calidad, en el marco de la adulteración
+16:00				
+FORTALECIMIENTO INSTITUCIONAL				
+16:30	Marcelo Perez y Julieta Leira. Equipo Técnico CFI		Acciones para el fortalecimiento del sector apícola	Presentación de Lineamientos CFI para el sector apícola. Validación e implementación de acciones de fomento. Acciones vigentes. ¿Cómo seguimos?
+CIERRE Y CONCLUSIONES				
+17:00		Teresa Oyhamburu, Directora de Programas del CFI	Conclusiones del 3° Encuentro	Presentación de conclusiones
+		Sergio Busso, Ministro de Bioagroindustria		
+		Guillermo Acosta, Ministro de Economía y Gestión Pública		
