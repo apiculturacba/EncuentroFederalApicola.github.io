@@ -21,8 +21,12 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center space-x-4">
             {/* Logo CFI */}
-            <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center border">
-              <span className="text-xs text-gray-400 text-center">Logo CFI</span>
+            <div className="w-20 h-16 flex items-center justify-center">
+              <img 
+                src="/logo-cfi.png" 
+                alt="Consejo Federal de Inversiones" 
+                className="h-14 w-auto object-contain"
+              />
             </div>
             
             <div className="flex-1">
@@ -31,8 +35,12 @@ export default function Header() {
             </div>
 
             {/* Logo Ministerio */}
-            <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center border">
-              <span className="text-xs text-gray-400 text-center">Logo Ministerio</span>
+            <div className="w-32 h-16 flex items-center justify-center">
+              <img 
+                src="/logo-ministerio.jpg" 
+                alt="Ministerio de Bioagroindustria - Gobierno de Córdoba" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
           </div>
           
