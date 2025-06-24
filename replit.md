@@ -86,8 +86,13 @@ The application is configured for deployment on Replit with the following setup:
 
 The build process creates optimized client bundles in `dist/public` and a bundled server in `dist/index.js`, ensuring efficient production deployment with proper static asset serving.
 
-## Changelog
-- June 24, 2025. Initial setup
+## Recent Changes
+- June 24, 2025: Initial setup with sample data
+- June 24, 2025: Updated with real event information:
+  - Event dates: July 10-11, 2025 (2 days)
+  - Location: Centro de Convenciones, Complejo Ferial - Córdoba Capital
+  - Adjusted day tabs and schedule structure
+  - Prepared data structure for real program content
 
 ## User Preferences
 

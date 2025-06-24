@@ -69,171 +69,62 @@ export class MemStorage implements IStorage {
       this.rooms.set(id, { ...room, id });
     });
 
-    // Initialize activities
+    // Initialize activities - Programa base del 3er Encuentro Federal Apícola
     const activitiesData = [
-      // Day 1
+      // Day 1 - Jueves 10 de Julio
       {
-        title: "Innovaciones en Manejo de Colmenas: Tecnología y Tradición",
-        description: "Exploramos las últimas tecnologías aplicadas a la apicultura moderna, desde sensores IoT hasta técnicas tradicionales mejoradas.",
+        title: "Bienvenida y Apertura del Evento",
+        description: "Ceremonia de inauguración del 3er Encuentro Federal Apícola con autoridades y organizadores.",
         type: "conferencia",
         day: 1,
         startTime: "09:00",
-        endTime: "10:00",
+        endTime: "09:30",
         roomId: 1,
         speakerId: 1,
         capacity: 300,
         requiresRegistration: false,
-        tags: ["tecnología", "innovación", "manejo"]
+        tags: ["inauguración", "bienvenida"]
       },
       {
-        title: "Construcción de Colmenas Sustentables",
-        description: "Taller práctico sobre construcción de colmenas usando materiales locales y técnicas ecológicas. Incluye kit de herramientas.",
-        type: "taller",
+        title: "Conferencia Magistral: Estado Actual de la Apicultura Argentina",
+        description: "Análisis del panorama actual de la apicultura en Argentina, desafíos y oportunidades del sector.",
+        type: "conferencia",
         day: 1,
-        startTime: "10:30",
-        endTime: "12:00",
-        roomId: 2,
+        startTime: "09:30",
+        endTime: "10:30",
+        roomId: 1,
         speakerId: 2,
-        capacity: 25,
-        enrolled: 20,
-        requiresRegistration: true,
-        tags: ["construcción", "sustentabilidad", "práctico"]
-      },
-      {
-        title: "Feria de Productos Apícolas y Equipamiento",
-        description: "Exposición comercial con los mejores productos de miel, equipos para apicultura y derivados apícolas de todo el país.",
-        type: "exposicion",
-        day: 1,
-        startTime: "14:00",
-        endTime: "18:00",
-        roomId: 4,
-        speakerId: 5,
-        capacity: 500,
+        capacity: 300,
         requiresRegistration: false,
-        tags: ["comercial", "productos", "equipamiento"]
+        tags: ["panorama", "sector", "argentina"]
+      },
+      // Day 2 - Viernes 11 de Julio
+      {
+        title: "Taller de Manejo de Colmenas",
+        description: "Técnicas prácticas para el manejo eficiente de colmenas y mejora de la productividad apícola.",
+        type: "taller",
+        day: 2,
+        startTime: "09:00",
+        endTime: "11:00",
+        roomId: 2,
+        speakerId: 3,
+        capacity: 40,
+        enrolled: 25,
+        requiresRegistration: true,
+        tags: ["manejo", "técnicas", "productividad"]
       },
       {
-        title: "Desafíos del Cambio Climático en la Apicultura",
-        description: "Mesa redonda con expertos internacionales sobre adaptación de la apicultura a los nuevos escenarios climáticos.",
+        title: "Mesa Redonda: Innovación en Productos Apícolas",
+        description: "Discusión sobre nuevos productos y tendencias en la industria apícola nacional e internacional.",
         type: "panel",
-        day: 1,
-        startTime: "15:30",
-        endTime: "17:00",
+        day: 2,
+        startTime: "14:00",
+        endTime: "16:00",
         roomId: 1,
         speakerId: 4,
         capacity: 300,
         requiresRegistration: false,
-        tags: ["clima", "adaptación", "sustentabilidad"]
-      },
-      {
-        title: "Plantas Melíferas: Identificación y Cultivo",
-        description: "Aprende a identificar y cultivar las mejores plantas para la producción de miel en diferentes regiones del país.",
-        type: "taller",
-        day: 1,
-        startTime: "17:30",
-        endTime: "19:00",
-        roomId: 3,
-        speakerId: 3,
-        capacity: 60,
-        enrolled: 45,
-        requiresRegistration: true,
-        tags: ["plantas", "cultivo", "botanica"]
-      },
-      {
-        title: "Certificación en Buenas Prácticas Apícolas",
-        description: "Examen para obtener certificación oficial en buenas prácticas apícolas. Válido para registro sanitario.",
-        type: "certificacion",
-        day: 1,
-        startTime: "19:30",
-        endTime: "20:30",
-        roomId: 5,
-        speakerId: 6,
-        capacity: 40,
-        enrolled: 35,
-        requiresRegistration: true,
-        tags: ["certificacion", "buenas-practicas", "sanitario"]
-      },
-      // Day 2
-      {
-        title: "Genética Apícola y Mejoramiento de Razas",
-        description: "Conferencia sobre técnicas avanzadas de mejoramiento genético en abejas para mayor productividad y resistencia.",
-        type: "conferencia",
-        day: 2,
-        startTime: "09:00",
-        endTime: "10:30",
-        roomId: 1,
-        speakerId: 1,
-        capacity: 300,
-        requiresRegistration: false,
-        tags: ["genetica", "mejoramiento", "razas"]
-      },
-      {
-        title: "Procesamiento y Control de Calidad de Miel",
-        description: "Taller práctico sobre técnicas de procesamiento, análisis fisicoquímico y control de calidad de productos apícolas.",
-        type: "taller",
-        day: 2,
-        startTime: "11:00",
-        endTime: "13:00",
-        roomId: 2,
-        speakerId: 6,
-        capacity: 25,
-        enrolled: 22,
-        requiresRegistration: true,
-        tags: ["procesamiento", "calidad", "análisis"]
-      },
-      {
-        title: "Marketing Digital para Apicultores",
-        description: "Estrategias de marketing digital, comercio electrónico y branding para pequeños y medianos productores apícolas.",
-        type: "conferencia",
-        day: 2,
-        startTime: "14:00",
-        endTime: "15:30",
-        roomId: 1,
-        speakerId: 5,
-        capacity: 300,
-        requiresRegistration: false,
-        tags: ["marketing", "digital", "comercialización"]
-      },
-      // Day 3
-      {
-        title: "Polinización y Servicios Ecosistémicos",
-        description: "Importancia de la polinización en la agricultura y conservación de ecosistemas. Valoración económica de servicios apícolas.",
-        type: "conferencia",
-        day: 3,
-        startTime: "09:30",
-        endTime: "11:00",
-        roomId: 1,
-        speakerId: 3,
-        capacity: 300,
-        requiresRegistration: false,
-        tags: ["polinización", "ecosistemas", "agricultura"]
-      },
-      {
-        title: "Sanidad Apícola y Prevención de Enfermedades",
-        description: "Protocolo de prevención y tratamiento de las principales enfermedades que afectan las colmenas.",
-        type: "taller",
-        day: 3,
-        startTime: "11:30",
-        endTime: "13:00",
-        roomId: 2,
-        speakerId: 6,
-        capacity: 25,
-        enrolled: 18,
-        requiresRegistration: true,
-        tags: ["sanidad", "enfermedades", "prevencion"]
-      },
-      {
-        title: "Clausura y Perspectivas Futuras",
-        description: "Ceremonia de clausura con síntesis de conclusiones y perspectivas para el desarrollo de la apicultura nacional.",
-        type: "conferencia",
-        day: 3,
-        startTime: "16:00",
-        endTime: "17:30",
-        roomId: 1,
-        speakerId: 1,
-        capacity: 300,
-        requiresRegistration: false,
-        tags: ["clausura", "perspectivas", "desarrollo"]
+        tags: ["innovación", "productos", "tendencias"]
       }
     ];
 

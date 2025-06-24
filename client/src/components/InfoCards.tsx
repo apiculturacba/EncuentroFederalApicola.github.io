@@ -12,8 +12,8 @@ export default function InfoCards() {
           </div>
           <h3 className="text-lg font-semibold text-gray-900">Ubicación</h3>
         </div>
-        <p className="text-gray-600 mb-3">Centro de Convenciones Buenos Aires</p>
-        <p className="text-sm text-gray-500 mb-4">Av. Figueroa Alcorta 2275, C1425CLA CABA</p>
+        <p className="text-gray-600 mb-3">Centro de Convenciones</p>
+        <p className="text-sm text-gray-500 mb-4">Complejo Ferial - Córdoba Capital</p>
         <button className="text-nature-600 hover:text-nature-700 font-medium text-sm flex items-center">
           <ExternalLink className="w-3 h-3 mr-1" />
           Ver en Google Maps
@@ -30,15 +30,11 @@ export default function InfoCards() {
         </div>
         <div className="space-y-2 text-sm text-gray-600">
           <div className="flex justify-between">
-            <span>Viernes:</span>
-            <span className="font-medium">9:00 - 20:30</span>
+            <span>Jueves 10:</span>
+            <span className="font-medium">9:00 - 18:00</span>
           </div>
           <div className="flex justify-between">
-            <span>Sábado:</span>
-            <span className="font-medium">8:30 - 21:00</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Domingo:</span>
+            <span>Viernes 11:</span>
             <span className="font-medium">9:00 - 18:00</span>
           </div>
         </div>

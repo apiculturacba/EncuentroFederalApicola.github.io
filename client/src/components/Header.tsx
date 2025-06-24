@@ -16,7 +16,7 @@ export default function Header() {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">3er Encuentro Federal Apícola</h1>
-              <p className="text-sm text-gray-600">15-17 Marzo 2024 | Buenos Aires</p>
+              <p className="text-sm text-gray-600">10-11 Julio 2025 | Córdoba Capital</p>
             </div>
           </div>
           

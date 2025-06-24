@@ -11,15 +11,15 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center gap-4 text-sm">
           <div className="bg-white/20 px-4 py-2 rounded-full flex items-center">
             <Calendar className="w-4 h-4 mr-2" />
-            3 días de contenido
+            2 días de contenido
           </div>
           <div className="bg-white/20 px-4 py-2 rounded-full flex items-center">
             <Users className="w-4 h-4 mr-2" />
-            50+ ponentes
+            Ponentes especializados
           </div>
           <div className="bg-white/20 px-4 py-2 rounded-full flex items-center">
             <GraduationCap className="w-4 h-4 mr-2" />
-            25+ talleres
+            Talleres prácticos
           </div>
         </div>
       </div>
