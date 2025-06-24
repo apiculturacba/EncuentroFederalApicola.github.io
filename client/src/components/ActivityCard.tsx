@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { ActivityWithDetails } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import ActivityDetailModal from "./ActivityDetailModal";
 import { 
   Mic, 
   Wrench, 
@@ -44,6 +46,7 @@ const typeIconColors = {
 };
 
 export default function ActivityCard({ activity }: ActivityCardProps) {
+  const [showModal, setShowModal] = useState(false);
   const IconComponent = typeIcons[activity.type as keyof typeof typeIcons] || Mic;
   const typeColor = typeColors[activity.type as keyof typeof typeColors] || typeColors.conferencia;
   const iconColor = typeIconColors[activity.type as keyof typeof typeIconColors] || typeIconColors.conferencia;
@@ -137,6 +140,7 @@ export default function ActivityCard({ activity }: ActivityCardProps) {
             <Button 
               variant="ghost" 
               size="sm"
+              onClick={() => setShowModal(true)}
               className="text-honey-600 hover:text-honey-700 text-sm font-medium"
             >
               Ver detalles
@@ -144,6 +148,12 @@ export default function ActivityCard({ activity }: ActivityCardProps) {
           </div>
         </div>
       </div>
+      
+      <ActivityDetailModal 
+        activity={activity}
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
     </div>
   );
 }
