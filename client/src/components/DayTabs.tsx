@@ -8,8 +8,8 @@ interface DayTabsProps {
 
 export default function DayTabs({ selectedDay, onDayChange }: DayTabsProps) {
   const days = [
-    { number: 1, label: "Día 1 - Jueves 10" },
-    { number: 2, label: "Día 2 - Viernes 11" },
+    { number: 1, label: "Jueves 10 - Jóvenes" },
+    { number: 2, label: "Viernes 11 - Innovación" },
   ];
 
   return (

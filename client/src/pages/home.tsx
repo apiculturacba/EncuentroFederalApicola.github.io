@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import SearchFilters from "@/components/SearchFilters";
+// Removed SearchFilters import
 import DayTabs from "@/components/DayTabs";
 import ActivityCard from "@/components/ActivityCard";
 import InfoCards from "@/components/InfoCards";
@@ -12,9 +12,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Home() {
   const [selectedDay, setSelectedDay] = useState(1);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [typeFilter, setTypeFilter] = useState("");
-  const [roomFilter, setRoomFilter] = useState("");
+  // Removed search and filter functionality
 
   const { data: activities = [], isLoading } = useQuery<ActivityWithDetails[]>({
     queryKey: ["/api/activities"],
@@ -24,39 +22,10 @@ export default function Home() {
     queryKey: ["/api/rooms"],
   });
 
-  // Filter activities based on selected day and filters
-  const filteredActivities = activities.filter(activity => {
-    let matches = activity.day === selectedDay;
-    
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      matches = matches && (
-        activity.title.toLowerCase().includes(query) ||
-        activity.description.toLowerCase().includes(query) ||
-        activity.speaker?.name.toLowerCase().includes(query) ||
-        activity.tags?.some(tag => tag.toLowerCase().includes(query))
-      );
-    }
-    
-    if (typeFilter) {
-      matches = matches && activity.type === typeFilter;
-    }
-    
-    if (roomFilter) {
-      matches = matches && activity.roomId === parseInt(roomFilter);
-    }
-    
-    return matches;
-  });
+  // Filter activities based on selected day only
+  const filteredActivities = activities.filter(activity => activity.day === selectedDay);
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
-  };
-
-  const handleFilter = (type: string, room: string) => {
-    setTypeFilter(type);
-    setRoomFilter(room);
-  };
+  // Removed search and filter handlers
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -64,12 +33,6 @@ export default function Home() {
       <Hero />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <SearchFilters
-          rooms={rooms}
-          onSearch={handleSearch}
-          onFilter={handleFilter}
-        />
-        
         <DayTabs selectedDay={selectedDay} onDayChange={setSelectedDay} />
         
         <div id="actividades">
