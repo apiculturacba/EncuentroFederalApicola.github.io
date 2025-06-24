@@ -1,8 +1,8 @@
-import { MapPin, Clock, Mail, Phone, Globe, ExternalLink } from "lucide-react";
+import { MapPin, Clock, Mail, Phone, Bed, ExternalLink } from "lucide-react";
 
 export default function InfoCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
       
       {/* Location Info */}
       <div className="bg-white rounded-lg shadow-md p-6">
@@ -14,10 +14,15 @@ export default function InfoCards() {
         </div>
         <p className="text-gray-600 mb-3">Centro de Convenciones</p>
         <p className="text-sm text-gray-500 mb-4">Complejo Ferial - Córdoba Capital</p>
-        <button className="text-nature-600 hover:text-nature-700 font-medium text-sm flex items-center">
+        <a 
+          href="https://maps.app.goo.gl/poF8XpgTSUqiaRfK9" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-nature-600 hover:text-nature-700 font-medium text-sm flex items-center"
+        >
           <ExternalLink className="w-3 h-3 mr-1" />
           Ver en Google Maps
-        </button>
+        </a>
       </div>
 
       {/* Schedule Info */}
@@ -51,17 +56,41 @@ export default function InfoCards() {
         <div className="space-y-2 text-sm text-gray-600">
           <div className="flex items-center">
             <Phone className="text-gray-400 mr-2 w-4 h-4" />
-            <span>+54 11 4567-8900</span>
+            <span>+54 9 3518 07-2572</span>
+          </div>
+          <div className="flex items-center">
+            <Phone className="text-gray-400 mr-2 w-4 h-4" />
+            <span>+54 9 3516 66-7756</span>
           </div>
           <div className="flex items-center">
             <Mail className="text-gray-400 mr-2 w-4 h-4" />
-            <span>info@encuentroapicola.com.ar</span>
+            <span>apicolacba@gmail.com</span>
           </div>
           <div className="flex items-center">
-            <Globe className="text-gray-400 mr-2 w-4 h-4" />
-            <span>www.encuentroapicola.com.ar</span>
+            <Mail className="text-gray-400 mr-2 w-4 h-4" />
+            <span>biodesarrollominbai@gmail.com</span>
           </div>
         </div>
+      </div>
+
+      {/* Accommodation Info */}
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="flex items-center mb-4">
+          <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+            <Bed className="text-orange-600 w-6 h-6" />
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900">Alojamiento</h3>
+        </div>
+        <p className="text-gray-600 mb-4">Encuentra hoteles y alojamientos cercanos al evento en Córdoba Capital.</p>
+        <a 
+          href="https://www.google.com/maps/search/hoteles+cerca+de+Complejo+Ferial+Córdoba+Capital/@-31.4173391,-64.1924976,15z" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-orange-600 hover:text-orange-700 font-medium text-sm flex items-center"
+        >
+          <ExternalLink className="w-3 h-3 mr-1" />
+          Buscar hoteles cercanos
+        </a>
       </div>
     </div>
   );
