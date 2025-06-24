@@ -19,8 +19,13 @@ export default function Header() {
     <header className="bg-white shadow-lg border-b-4 border-honey-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-4 py-6">
-          {/* Logo Ministerio - Prominente en la parte superior */}
-          <div className="w-full flex justify-center">
+          {/* Logos centrados arriba */}
+          <div className="flex items-center justify-center space-x-8">
+            <img 
+              src="/logo-cfi.png" 
+              alt="Consejo Federal de Inversiones" 
+              className="h-16 w-auto object-contain"
+            />
             <img 
               src="/logo-ministerio.jpg" 
               alt="Ministerio de Bioagroindustria - Gobierno de Córdoba" 
@@ -28,23 +33,9 @@ export default function Header() {
             />
           </div>
           
-          <div className="flex items-center justify-between w-full">
-            {/* Logo CFI */}
-            <div className="w-20 h-12 flex items-center justify-center">
-              <img 
-                src="/logo-cfi.png" 
-                alt="Consejo Federal de Inversiones" 
-                className="h-10 w-auto object-contain"
-              />
-            </div>
-            
-            <div className="text-center flex-1">
-              <h1 className="text-2xl font-bold text-gray-900">3er Encuentro Federal Apícola</h1>
-              <p className="text-sm text-gray-600">10-11 Julio 2025 | Córdoba Capital</p>
-            </div>
-
-            {/* Espacio para simetría */}
-            <div className="w-20 h-12"></div>
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900">3er Encuentro Federal Apícola</h1>
+            <p className="text-sm text-gray-600">10-11 Julio 2025 | Córdoba Capital</p>
           </div>
           
           <nav className="hidden md:flex space-x-8">
