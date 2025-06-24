@@ -1,8 +1,19 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText, ExternalLink, MapPin, Phone } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contacto');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleUbicacionClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://maps.app.goo.gl/poF8XpgTSUqiaRfK9', '_blank');
+  };
 
   return (
     <header className="bg-white shadow-lg border-b-4 border-honey-500">
@@ -24,18 +35,38 @@ export default function Header() {
             <a href="#programa" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
               Programa
             </a>
-            <a href="/image-viewer" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
-              Programa Original
+            <a 
+              href="/attached_assets/Programa Completo_1750772785861.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-honey-600 font-medium transition-colors flex items-center"
+            >
+              <FileText className="w-4 h-4 mr-1" />
+              Programa Completo
             </a>
-            <a href="#ponentes" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
-              Ponentes
+            <a 
+              href="https://forms.gle/nN4p1kR9rnwWmThr8" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-honey-600 font-medium transition-colors flex items-center"
+            >
+              <ExternalLink className="w-4 h-4 mr-1" />
+              Inscripción
             </a>
-            <a href="#ubicacion" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
+            <button 
+              onClick={handleUbicacionClick}
+              className="text-gray-700 hover:text-honey-600 font-medium transition-colors flex items-center"
+            >
+              <MapPin className="w-4 h-4 mr-1" />
               Ubicación
-            </a>
-            <a href="#contacto" className="text-gray-700 hover:text-honey-600 font-medium transition-colors">
+            </button>
+            <button 
+              onClick={handleContactClick}
+              className="text-gray-700 hover:text-honey-600 font-medium transition-colors flex items-center"
+            >
+              <Phone className="w-4 h-4 mr-1" />
               Contacto
-            </a>
+            </button>
           </nav>
           
           <button 
@@ -56,15 +87,34 @@ export default function Header() {
               <a href="#programa" className="text-gray-700 hover:text-honey-600 font-medium">
                 Programa
               </a>
-              <a href="#ponentes" className="text-gray-700 hover:text-honey-600 font-medium">
-                Ponentes
+              <a 
+                href="/attached_assets/Programa Completo_1750772785861.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-honey-600 font-medium"
+              >
+                Programa Completo
               </a>
-              <a href="#ubicacion" className="text-gray-700 hover:text-honey-600 font-medium">
+              <a 
+                href="https://forms.gle/nN4p1kR9rnwWmThr8" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-honey-600 font-medium"
+              >
+                Inscripción
+              </a>
+              <button 
+                onClick={handleUbicacionClick}
+                className="text-gray-700 hover:text-honey-600 font-medium text-left"
+              >
                 Ubicación
-              </a>
-              <a href="#contacto" className="text-gray-700 hover:text-honey-600 font-medium">
+              </button>
+              <button 
+                onClick={handleContactClick}
+                className="text-gray-700 hover:text-honey-600 font-medium text-left"
+              >
                 Contacto
-              </a>
+              </button>
             </nav>
           </div>
         )}
