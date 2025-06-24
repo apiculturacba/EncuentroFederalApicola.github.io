@@ -67,9 +67,8 @@ export default function SearchFilters({ rooms, onSearch, onFilter }: SearchFilte
                 <SelectItem value="all">Todos los tipos</SelectItem>
                 <SelectItem value="conferencia">Conferencias</SelectItem>
                 <SelectItem value="taller">Talleres</SelectItem>
-                <SelectItem value="exposicion">Exposiciones</SelectItem>
                 <SelectItem value="panel">Paneles</SelectItem>
-                <SelectItem value="certificacion">Certificaciones</SelectItem>
+                <SelectItem value="registracion">Registro</SelectItem>
               </SelectContent>
             </Select>
             

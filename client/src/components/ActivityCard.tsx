@@ -22,6 +22,7 @@ const typeIcons = {
   exposicion: Store,
   panel: Users,
   certificacion: IdCard,
+  registracion: User,
 };
 
 const typeColors = {
@@ -30,6 +31,7 @@ const typeColors = {
   exposicion: "bg-honey-100 text-honey-800",
   panel: "bg-blue-100 text-blue-800",
   certificacion: "bg-orange-100 text-orange-800",
+  registracion: "bg-gray-100 text-gray-800",
 };
 
 const typeIconColors = {
@@ -38,6 +40,7 @@ const typeIconColors = {
   exposicion: "bg-honey-100 text-honey-600",
   panel: "bg-blue-100 text-blue-600",
   certificacion: "bg-orange-100 text-orange-600",
+  registracion: "bg-gray-100 text-gray-600",
 };
 
 export default function ActivityCard({ activity }: ActivityCardProps) {
@@ -68,6 +71,7 @@ export default function ActivityCard({ activity }: ActivityCardProps) {
       exposicion: "Exposición",
       panel: "Panel",
       certificacion: "Certificación",
+      registracion: "Registro",
     };
     return types[type as keyof typeof types] || type;
   };
